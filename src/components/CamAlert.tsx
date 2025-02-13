@@ -225,6 +225,46 @@ const CamAlert = () => {
           </div>
         </motion.header>
 
+        {/* Section Contexte */}
+        <motion.section 
+          initial={{ opacity: 0, y: 20 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true }}
+          className="bg-white rounded-3xl shadow-xl p-6 sm:p-8 lg:p-12 mt-12"
+        >
+          <div className="max-w-4xl mx-auto">
+            <motion.div
+              initial={{ opacity: 0, y: 20 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true }}
+              className="bg-gradient-to-r from-red-50 to-yellow-50 rounded-2xl p-6 border-l-4 border-red-500"
+            >
+              <h2 className="text-xl sm:text-2xl font-bold text-gray-900 mb-4 flex items-center gap-2">
+                <AlertTriangle className="h-6 w-6 text-red-500" />
+                Contexte Actuel
+              </h2>
+              <div className="space-y-4 text-gray-700">
+                <p className="leading-relaxed">
+                  Le Cameroun approche d&apos;une échéance électorale cruciale, et comme toujours, 
+                  certaines forces cherchent à diviser pour mieux régner.
+                </p>
+                <div className="bg-white/80 rounded-xl p-4">
+                  <p className="leading-relaxed">
+                    Un phénomène inquiétant est en cours sur les réseaux sociaux : 
+                    <span className="font-semibold text-red-600"> discours haineux, tribalisme </span> 
+                    et 
+                    <span className="font-semibold text-red-600"> attaques ciblées </span> 
+                    contre certaines communautés et figures politiques.
+                  </p>
+                  <p className="font-bold text-red-600 mt-2">
+                    Mais attention, tout cela est orchestré !
+                  </p>
+                </div>
+              </div>
+            </motion.div>
+          </div>
+        </motion.section>
+
         <main className="mt-12 space-y-12 pb-12">
           {/* Section Manipulations */}
           <motion.section 

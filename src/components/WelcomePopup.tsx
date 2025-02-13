@@ -72,7 +72,7 @@ const WelcomePopup = ({ isOpen, onClose }: { isOpen: boolean; onClose: () => voi
                       <AlertTriangle className="w-4 h-4 sm:w-5 sm:h-5 text-red-500 flex-shrink-0 mt-0.5" />
                       <div>
                         <h3 className="font-semibold text-red-800 text-sm sm:text-base">Danger Imminent</h3>
-                        <p className="text-red-600 text-xs sm:text-sm">Les réseaux sociaux violament sont utilisés pour diviser le cameroun</p>
+                        <p className="text-red-600 text-xs sm:text-sm">Les réseaux sociaux sont violament sont utilisés pour diviser le cameroun</p>
                       </div>
                     </div>
 

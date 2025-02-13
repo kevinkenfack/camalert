@@ -72,7 +72,7 @@ const WelcomePopup = ({ isOpen, onClose }: { isOpen: boolean; onClose: () => voi
                       <AlertTriangle className="w-4 h-4 sm:w-5 sm:h-5 text-red-500 flex-shrink-0 mt-0.5" />
                       <div>
                         <h3 className="font-semibold text-red-800 text-sm sm:text-base">Danger Imminent</h3>
-                        <p className="text-red-600 text-xs sm:text-sm">Les réseaux sociaux sont utilisés pour diviser notre nation</p>
+                        <p className="text-red-600 text-xs sm:text-sm">Les réseaux sociaux violament sont utilisés pour diviser le cameroun</p>
                       </div>
                     </div>
 
@@ -80,7 +80,7 @@ const WelcomePopup = ({ isOpen, onClose }: { isOpen: boolean; onClose: () => voi
                       <Shield className="w-4 h-4 sm:w-5 sm:h-5 text-yellow-600 flex-shrink-0 mt-0.5" />
                       <div>
                         <h3 className="font-semibold text-yellow-800 text-sm sm:text-base">Votre Mission</h3>
-                        <p className="text-yellow-700 text-xs sm:text-sm"> Aider à identifier et contrer la manipulation en ligne</p>
+                        <p className="text-yellow-700 text-xs sm:text-sm"> Aider à identifier, sensibiliser et contrer la manipulation et la division sur les resaux sociaux</p>
                       </div>
                     </div>
 
@@ -88,7 +88,7 @@ const WelcomePopup = ({ isOpen, onClose }: { isOpen: boolean; onClose: () => voi
                       <Heart className="w-4 h-4 sm:w-5 sm:h-5 text-green-500 flex-shrink-0 mt-0.5" />
                       <div>
                         <h3 className="font-semibold text-green-800 text-sm sm:text-base">Notre Force</h3>
-                        <p className="text-green-700 text-xs sm:text-sm">L&apos;unité et la cohésion de tous les Camerounais</p>
+                        <p className="text-green-700 text-xs sm:text-sm">L&apos;unité et la cohésion de tous les Camerounais peu imorte on origine</p>
                       </div>
                     </div>
                   </div>

@@ -2,14 +2,12 @@
 
 import React, { useState, useEffect } from 'react';
 import { motion } from 'framer-motion';
-import { AlertTriangle, CheckCircle, Shield, Users, Search, Heart, Flag, Bell } from 'lucide-react';
+import { AlertTriangle, CheckCircle, Shield, Users, Search, MapPin, Heart, Flag, Bell } from 'lucide-react';
 import { SocialIcon } from 'react-social-icons';
 import WelcomePopup from './WelcomePopup';
-import SignalerPopup from './SignalerPopup';
 
 const CamAlert = () => {
   const [showPopup, setShowPopup] = useState(true);
-  const [showSignalerPopup, setShowSignalerPopup] = useState(false);
   const [isScrolled, setIsScrolled] = useState(false);
 
   useEffect(() => {
@@ -22,31 +20,23 @@ const CamAlert = () => {
 
   const manipulationExamples = [
     "Des groupes organisés créent des milliers de faux comptes pour amplifier les messages de haine",
-    "Utilisation d\'intelligence artificielle pour créer de fausses images et vidéos compromettantes",
+    "Utilisation d'intelligence artificielle pour créer de fausses images et vidéos compromettantes",
     "Diffusion de fausses informations sur des tensions ethniques inexistantes",
-    "Création de faux sondages pour influencer l\'opinion publique",
+    "Création de faux sondages pour influencer l'opinion publique",
     "Utilisation de bots pour harceler les voix modérées et pacifiques",
-    "Manipulation des contenus pour créer des conflits entre régions",
-    "Certains se prétendent pro-gouvernement et diffusent des messages anti-opposition.",
-    "D\'autres se font passer pour des militants de l\'opposition en tenant des propos extrémistes.",
-    "Création de faux profils d\'opposants pour semer la haine.",
-    "Fabrication de faux comptes pro-gouvernement pour alimenter les tensions.",
-    "Création de faux comptes de journalistes pour diffuser de fausses informations",
-    "Utilisation de bots pour amplifier artificiellement les messages diviseurs",
-    "Diffusion de montages photos et vidéos manipulés",
-
+    "Manipulation des contenus pour créer des conflits entre régions"
   ];
 
   const preventionTips = [
     {
       icon: <Search className="w-6 h-6 text-green-500" />,
-      title: "Vérifiez l\'authenticité",
+      title: "Vérifiez l'authenticité",
       content: "Examinez attentivement la date de création, le nombre de followers, et la cohérence des publications."
     },
     {
       icon: <Shield className="w-6 h-6 text-yellow-500" />,
       title: "Croisez vos sources",
-      content: "Validez toujours l\'information auprès de plusieurs médias reconnus et fiables."
+      content: "Validez toujours l'information auprès de plusieurs médias reconnus et fiables."
     },
     {
       icon: <Heart className="w-6 h-6 text-red-500" />,
@@ -56,7 +46,7 @@ const CamAlert = () => {
     {
       icon: <Users className="w-6 h-6 text-blue-500" />,
       title: "Dialoguez",
-      content: "Privilégiez toujours l\'échange constructif et respectueux entre Camerounais."
+      content: "Privilégiez toujours l'échange constructif et respectueux entre Camerounais."
     }
   ];
 
@@ -64,30 +54,10 @@ const CamAlert = () => {
   const shareUrl = typeof window !== 'undefined' ? window.location.href : '';
 
   const socialLinks = [
-    {
-      name: 'Facebook',
-      network: 'facebook',
-      bgColor: '#1877F2',
-      onClick: () => window.open(`https://www.facebook.com/sharer/sharer.php?u=${encodeURIComponent(shareUrl)}&quote=${encodeURIComponent(shareMessage)}`, '_blank')
-    },
-    {
-      name: 'WhatsApp',
-      network: 'whatsapp',
-      bgColor: '#25D366',
-      onClick: () => window.open(`https://wa.me/?text=${encodeURIComponent(shareMessage + '\n' + shareUrl)}`, '_blank')
-    },
-    {
-      name: 'Twitter',
-      network: 'x',
-      bgColor: '#000000',
-      onClick: () => window.open(`https://twitter.com/intent/tweet?text=${encodeURIComponent(shareMessage)}&url=${encodeURIComponent(shareUrl)}`, '_blank')
-    },
-    {
-      name: 'Telegram',
-      network: 'telegram',
-      bgColor: '#0088cc',
-      onClick: () => window.open(`https://t.me/share/url?url=${encodeURIComponent(shareUrl)}&text=${encodeURIComponent(shareMessage)}`, '_blank')
-    }
+    { name: 'Facebook', network: 'facebook', bgColor: '#1877F2' },
+    { name: 'WhatsApp', network: 'whatsapp', bgColor: '#25D366' },
+    { name: 'Twitter', network: 'x', bgColor: '#000000' },
+    { name: 'Telegram', network: 'telegram', bgColor: '#0088cc' }
   ];
 
   return (
@@ -134,94 +104,86 @@ const CamAlert = () => {
       </motion.nav>
 
       <WelcomePopup isOpen={showPopup} onClose={() => setShowPopup(false)} />
-      <SignalerPopup isOpen={showSignalerPopup} onClose={() => setShowSignalerPopup(false)} />
 
       <div className="container mx-auto px-4 pt-24">
         {/* Hero Section améliorée */}
         <motion.header 
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
-          className="relative rounded-3xl overflow-hidden bg-gradient-to-r from-green-600 via-red-600 to-yellow-500"
+          className="relative rounded-3xl overflow-hidden bg-gradient-to-r from-green-600 via-red-600 to-yellow-500 p-6 sm:p-8 lg:p-12 min-h-[70vh] flex items-center"
         >
-          <div className="min-h-[50vh] sm:min-h-[70vh] flex items-center justify-center p-4 sm:p-8 lg:p-12">
-            <div className="absolute inset-0 bg-black/20" />
-            
-            {/* Motif camerounais amélioré */}
-            <div className="absolute inset-0 opacity-10">
-              <div className="w-full h-full" style={{
-                backgroundImage: `url("data:image/svg+xml,%3Csvg width='80' height='80' viewBox='0 0 80 80' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M40 0l40 40-40 40L0 40z' fill='%23ffffff' fill-opacity='0.4'/%3E%3C/svg%3E")`,
-                backgroundSize: '80px 80px'
-              }} />
-            </div>
+          <div className="absolute inset-0 bg-black/20" />
+          
+          {/* Motif camerounais amélioré */}
+          <div className="absolute inset-0 opacity-10">
+            <div className="w-full h-full" style={{
+              backgroundImage: `url("data:image/svg+xml,%3Csvg width='80' height='80' viewBox='0 0 80 80' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M40 0l40 40-40 40L0 40z' fill='%23ffffff' fill-opacity='0.4'/%3E%3C/svg%3E")`,
+              backgroundSize: '80px 80px'
+            }} />
+          </div>
 
-            <div className="relative z-10 max-w-4xl mx-auto">
-              <motion.div
+          <div className="relative z-10 max-w-4xl mx-auto">
+            <motion.div
+              initial={{ opacity: 0, y: 20 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ delay: 0.2 }}
+              className="text-center"
+            >
+              {/* Titre responsive amélioré */}
+              <h1 className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-black text-white mb-6 leading-tight">
+                <motion.span
+                  initial={{ opacity: 0, y: 20 }}
+                  animate={{ opacity: 1, y: 0 }}
+                  transition={{ delay: 0.3 }}
+                  className="inline-block"
+                >
+                  🚨 ALERTE
+                </motion.span>
+                <br className="md:hidden" />
+                <motion.span
+                  initial={{ opacity: 0, y: 20 }}
+                  animate={{ opacity: 1, y: 0 }}
+                  transition={{ delay: 0.4 }}
+                  className="inline-block bg-white/10 px-4 py-2 rounded-xl backdrop-blur-sm"
+                >
+                  MANIPULATION 🇨🇲
+                </motion.span>
+              </h1>
+              
+              <motion.p 
                 initial={{ opacity: 0, y: 20 }}
                 animate={{ opacity: 1, y: 0 }}
-                transition={{ delay: 0.2 }}
-                className="text-center"
+                transition={{ delay: 0.5 }}
+                className="text-lg sm:text-xl lg:text-2xl text-white/90 mb-8 max-w-3xl mx-auto leading-relaxed"
               >
-                {/* Titre responsive amélioré */}
-                <h1 className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-black text-white mb-6 leading-tight">
-                  <motion.span
-                    initial={{ opacity: 0, y: 20 }}
-                    animate={{ opacity: 1, y: 0 }}
-                    transition={{ delay: 0.3 }}
-                    className="inline-block"
-                  >
-                    🚨 ALERTE
-                  </motion.span>
-                  <br className="md:hidden" />
-                  <motion.span
-                    initial={{ opacity: 0, y: 20 }}
-                    animate={{ opacity: 1, y: 0 }}
-                    transition={{ delay: 0.4 }}
-                    className="inline-block bg-white/10 px-4 py-2 rounded-xl backdrop-blur-sm"
-                  >
-                    MANIPULATION
-                  </motion.span>
-                </h1>
-                
-                <motion.p 
-                  initial={{ opacity: 0, y: 20 }}
-                  animate={{ opacity: 1, y: 0 }}
-                  transition={{ delay: 0.5 }}
-                  className="text-lg sm:text-xl lg:text-2xl text-white/90 mb-8 max-w-3xl mx-auto leading-relaxed"
-                >
-                  Le <span className="font-bold">Cameroun</span> fait face à des series de 
-                  manipulation et de divisions sur les réseaux sociaux. Ensemble, protégeons notre unité.
-                </motion.p>
+                Le <span className="font-bold">Cameroun</span> fait face à des tentatives de 
+                manipulation sur les réseaux sociaux. Ensemble, protégeons notre unité.
+              </motion.p>
 
-                <motion.div 
-                  initial={{ opacity: 0, y: 20 }}
-                  animate={{ opacity: 1, y: 0 }}
-                  transition={{ delay: 0.6 }}
-                  className="flex flex-col sm:flex-row gap-4 justify-center"
+              <motion.div 
+                initial={{ opacity: 0, y: 20 }}
+                animate={{ opacity: 1, y: 0 }}
+                transition={{ delay: 0.6 }}
+                className="flex flex-col sm:flex-row gap-4 justify-center"
+              >
+                <motion.button
+                  whileHover={{ scale: 1.05 }}
+                  whileTap={{ scale: 0.95 }}
+                  className="bg-white text-green-600 px-6 py-3 rounded-full font-bold hover:bg-green-50 transition-colors flex items-center justify-center gap-2"
                 >
-                  <motion.button
-                    whileHover={{ scale: 1.05 }}
-                    whileTap={{ scale: 0.95 }}
-                    onClick={() => {
-                      const element = document.getElementById('protection');
-                      element?.scrollIntoView({ behavior: 'smooth' });
-                    }}
-                    className="bg-white text-green-600 px-6 py-3 rounded-full font-bold hover:bg-green-50 transition-colors flex items-center justify-center gap-2"
-                  >
-                    <Shield className="w-5 h-5" />
-                    Comment se protéger ?
-                  </motion.button>
-                  <motion.button
-                    whileHover={{ scale: 1.05 }}
-                    whileTap={{ scale: 0.95 }}
-                    onClick={() => setShowSignalerPopup(true)}
-                    className="bg-black/30 text-white px-6 py-3 rounded-full font-bold hover:bg-black/40 transition-colors flex items-center justify-center gap-2"
-                  >
-                    <AlertTriangle className="w-5 h-5" />
-                    Signaler un cas
-                  </motion.button>
-                </motion.div>
+                  <Shield className="w-5 h-5" />
+                  Comment se protéger ?
+                </motion.button>
+                <motion.button
+                  whileHover={{ scale: 1.05 }}
+                  whileTap={{ scale: 0.95 }}
+                  className="bg-black/30 text-white px-6 py-3 rounded-full font-bold hover:bg-black/40 transition-colors flex items-center justify-center gap-2"
+                >
+                  <AlertTriangle className="w-5 h-5" />
+                  Signaler une manipulation
+                </motion.button>
               </motion.div>
-            </div>
+            </motion.div>
           </div>
         </motion.header>
 
@@ -236,14 +198,9 @@ const CamAlert = () => {
             <h2 className="text-2xl sm:text-3xl lg:text-4xl font-bold text-gray-900 mb-8 flex items-center gap-3">
               <AlertTriangle className="h-8 w-8 text-red-500" />
               <span className="bg-gradient-to-r from-red-600 to-red-500 bg-clip-text text-transparent">
-                FAUX PROFILS, INTOX ET STRATÉGIE DE DIVISION
+                Stratégies de Manipulation
               </span>
             </h2>
-
-            <p className="text-lg text-gray-700 mb-8">
-              Une grande partie des messages incitant à la haine ne viennent pas de vrais citoyens, 
-              mais de faux comptes créés pour manipuler l&apos;opinion :
-            </p>
 
             <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-6">
               {manipulationExamples.map((example, index) => (
@@ -262,10 +219,6 @@ const CamAlert = () => {
                 </motion.div>
               ))}
             </div>
-            <p className="mt-8 text-red-600 font-semibold flex items-center gap-2">
-              <AlertTriangle className="h-5 w-5" />
-              Ces gens ne cherchent pas à défendre une cause, mais à semer la confusion et la division.
-            </p>
           </motion.section>
 
           {/* Section Prévention */}
@@ -275,36 +228,12 @@ const CamAlert = () => {
             viewport={{ once: true }}
             className="bg-white rounded-3xl shadow-xl p-6 sm:p-8 lg:p-12"
           >
-            <h2 className="text-2xl sm:text-3xl lg:text-4xl font-bold text-gray-900 mb-8 flex items-center gap-3" id='protection'>
+            <h2 className="text-2xl sm:text-3xl lg:text-4xl font-bold text-gray-900 mb-8 flex items-center gap-3">
               <Shield className="h-8 w-8 text-yellow-500" />
               <span className="bg-gradient-to-r from-yellow-600 to-yellow-500 bg-clip-text text-transparent">
-               COMMENT NE PAS SE FAIRE MANIPULER ?
+                Se protéger ensemble
               </span>
             </h2>
-
-            {/* Vérification des sources */}
-            <div className="mb-8">
-              <h3 className="text-xl font-semibold text-gray-900 mb-4 flex items-center gap-2">
-                <Search className="h-5 w-5 text-blue-500" />
-                VÉRIFIEZ TOUJOURS LA SOURCE D&apos;UN MESSAGE
-              </h3>
-              <ul className="space-y-2 text-gray-700 ml-6 list-disc">
-                <li>Un vrai militant défend ses idées avec des arguments.</li>
-                <li>Un faux compte joue sur vos émotions, insulte et pousse à la haine.</li>
-              </ul>
-            </div>
-
-            {/* Contrôle de la colère */}
-            <div className="mb-8 bg-red-50 rounded-xl p-6">
-              <h3 className="text-1xl font-semibold text-red-800 mb-4 flex items-center gap-2">
-                <AlertTriangle className="h-5 w-5 text-red-500" />
-                NE VOUS LAISSEZ PAS PRENDRE PAR LA COLÈRE
-              </h3>
-              <div className="space-y-4 text-red-700">
-                <p>Beaucoup de messages sont conçus exprès pour provoquer et manipuler.</p>
-                <p className="font-medium">Posez-vous toujours la question : À qui profite cette division ?</p>
-              </div>
-            </div>
 
             <div className="grid sm:grid-cols-2 gap-6 lg:gap-8">
               {preventionTips.map((tip, index) => (
@@ -327,37 +256,6 @@ const CamAlert = () => {
                   </div>
                 </motion.div>
               ))}
-            </div>
-          </motion.section>
-
-          {/* Section Message d'unité */}
-          <motion.section 
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true }}
-            className="bg-white rounded-3xl shadow-xl p-6 sm:p-8 lg:p-12"
-          >
-            <h2 className="text-1xl sm:text-3xl lg:text-4xl font-bold text-gray-900 mb-8 flex items-center gap-3">
-              <Users className="h-8 w-8 text-green-500" />
-              ✊ L&apos;ENNEMI, CE N&apos;EST PAS VOTRE FRÈRE CAMEROUNAIS !
-            </h2>
-            
-            <div className="prose prose-lg max-w-none text-gray-700 mb-8">
-              <p>Le vrai combat, c&apos;est l&apos;avenir du Cameroun, pas des querelles ethniques montées de toutes pièces.</p>
-              <p>La haine ne profite qu&apos;à ceux qui veulent nous affaiblir et détourner notre attention.</p>
-            </div>
-
-            {/* Message d'unité */}
-            <div className="mt-8 bg-gradient-to-r from-green-50 to-yellow-50 rounded-xl p-6 text-center">
-              <h3 className="text-2xl font-bold text-gray-900 mb-4">
-                🇨🇲 CAMEROUNAIS, RESTONS UNIS ! ⭐️
-              </h3>
-              <p className="text-gray-700 mb-4">
-                Ne soyons pas les marionnettes de ceux qui utilisent les réseaux sociaux pour semer la division et la confusion.
-              </p>
-              <p className="text-lg font-semibold text-gray-800">
-                💡 Un peuple divisé est un peuple plus facile à contrôler, et cest exactement cequ&apos;il veulent. Ne tombons pas dans ce piège.
-              </p>
             </div>
           </motion.section>
 
@@ -385,9 +283,9 @@ const CamAlert = () => {
                 viewport={{ once: true }}
                 className="text-2xl sm:text-3xl lg:text-4xl font-bold mb-6 text-center"
               >
-                <span className="inline-block"></span>
-                <span className="mx-2">LA FORCE CEST L&apos;UNITÉ 💪</span>
-                
+                <span className="inline-block">🇨🇲</span>
+                <span className="mx-2">CAMEROUNAIS, RESTONS UNIS !</span>
+                <span className="inline-block">🇨🇲</span>
               </motion.h2>
               
               <motion.p 
@@ -398,7 +296,7 @@ const CamAlert = () => {
                 className="text-lg sm:text-xl text-center mb-8 max-w-2xl mx-auto leading-relaxed"
               >
                 La force du Cameroun réside dans son unité. Ne laissons pas les 
-                manipulations en ligne fragiliser la cohésion nationale.
+                manipulations en ligne fragiliser notre cohésion nationale.
               </motion.p>
 
               {/* Carte message important */}
@@ -410,8 +308,8 @@ const CamAlert = () => {
                 className="bg-white/10 backdrop-blur-sm rounded-2xl p-6 mb-8 max-w-3xl mx-auto"
               >
                 <p className="text-xl font-medium text-center">
-                  Un peuple uni est un peuple invincible. Ensemble, nous pouvons construire 
-                  un Cameroun fort et solidaire.
+                  "Un peuple uni est un peuple invincible. Ensemble, construisons 
+                  un Cameroun fort et solidaire."
                 </p>
               </motion.div>
 
@@ -423,7 +321,7 @@ const CamAlert = () => {
                   viewport={{ once: true }}
                   className="text-center text-lg font-medium"
                 >
-                  Partagez ce message pour sensibiliser le maximun de persones
+                  Partagez ce message pour sensibiliser vos proches
                 </motion.p>
 
                 <motion.div 
@@ -438,7 +336,6 @@ const CamAlert = () => {
                       whileHover={{ scale: 1.1 }}
                       whileTap={{ scale: 0.95 }}
                       className="p-3 rounded-full bg-white/10 hover:bg-white/20 transition-colors group"
-                      onClick={link.onClick}
                     >
                       <SocialIcon 
                         network={link.network}
@@ -452,7 +349,7 @@ const CamAlert = () => {
             </div>
           </motion.section>
 
-          {/* Nouvelle section Call-to-Action 
+          {/* Nouvelle section Call-to-Action */}
           <motion.section
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
@@ -501,7 +398,6 @@ const CamAlert = () => {
               </motion.button>
             </div>
           </motion.section>
-          */}
         </main>
 
         {/* Footer amélioré */}
@@ -509,11 +405,11 @@ const CamAlert = () => {
           <div className="flex justify-center items-center gap-2">
             <Flag className="w-5 h-5 text-green-600" />
             <p className="font-medium text-gray-600">
-            Pour un Cameroun uni et vigilant
+              CamAlert - Pour un Cameroun uni et vigilant
             </p>
           </div>
           <p className="text-sm text-gray-500">
-            © 2025 - Tous droits réservés
+            © 2025 - Tous droits réservés 🇨🇲
           </p>
         </footer>
       </div>

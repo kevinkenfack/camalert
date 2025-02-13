@@ -59,7 +59,7 @@ const WelcomePopup = ({ isOpen, onClose }: { isOpen: boolean; onClose: () => voi
                       <span className="text-3xl sm:text-4xl">🇨🇲</span>
                     </div>
                     <h2 className="text-xl sm:text-2xl font-bold text-gray-800">
-                      Bienvenue sur CamAlert
+                      Bienvenue ✌️
                     </h2>
                     <p className="text-sm sm:text-base text-gray-600 px-2">
                       Si vous êtes ici, c&apos;est parce que vous vous souciez de l&apos;avenir du Cameroun
@@ -79,8 +79,8 @@ const WelcomePopup = ({ isOpen, onClose }: { isOpen: boolean; onClose: () => voi
                     <div className="flex items-start gap-2 sm:gap-3 p-2 sm:p-3 bg-yellow-50 rounded-lg">
                       <Shield className="w-4 h-4 sm:w-5 sm:h-5 text-yellow-600 flex-shrink-0 mt-0.5" />
                       <div>
-                        <h3 className="font-semibold text-yellow-800 text-sm sm:text-base">Notre Mission</h3>
-                        <p className="text-yellow-700 text-xs sm:text-sm">Vous aider à identifier et contrer la manipulation en ligne</p>
+                        <h3 className="font-semibold text-yellow-800 text-sm sm:text-base">Votre Mission</h3>
+                        <p className="text-yellow-700 text-xs sm:text-sm"> Aider à identifier et contrer la manipulation en ligne</p>
                       </div>
                     </div>
 

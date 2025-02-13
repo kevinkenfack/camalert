@@ -2,12 +2,11 @@
 
 import React, { useState } from 'react';
 import { motion } from 'framer-motion';
-import { AlertTriangle, CheckCircle, Shield, Flag, Share2, ArrowRight, Heart, Users, Search } from 'lucide-react';
+import { AlertTriangle, CheckCircle, Shield, Users, Search } from 'lucide-react';
 import { SocialIcon } from 'react-social-icons';
 import WelcomePopup from './WelcomePopup';
 
 const CamAlert = () => {
-  const [isHovered, setIsHovered] = useState(null);
   const [showPopup, setShowPopup] = useState(true);
 
   const manipulationExamples = [
@@ -24,13 +23,6 @@ const CamAlert = () => {
     "Création de faux comptes de journalistes pour diffuser de fausses informations",
     "Utilisation de bots pour amplifier artificiellement les messages diviseurs",
     "Diffusion de montages photos et vidéos manipulés"
-  ];
-
-  const verificationTips = [
-    "Un vrai militant défend ses idées avec des arguments.",
-    "Un faux compte joue sur vos émotions, insulte et pousse à la haine.",
-    "Beaucoup de messages sont conçus exprès pour provoquer et manipuler.",
-    "Posez-vous toujours la question : À qui profite cette division ?"
   ];
 
   const preventionTips = [
@@ -55,14 +47,6 @@ const CamAlert = () => {
   // Ajout des fonctions de partage
   const shareMessage = "🚨 ALERTE MANIPULATION 🇨🇲\nProtégeons l&apos;unité du Cameroun ! Découvrez comment détecter et éviter les manipulations sur les réseaux sociaux.";
   const shareUrl = typeof window !== 'undefined' ? window.location.href : '';
-
-  const consequences = [
-    "Risque de violences intercommunautaires",
-    "Déstabilisation du processus électoral",
-    "Affaiblissement de la cohésion nationale",
-    "Perte de confiance dans les institutions",
-    "Impact négatif sur l\'économie et le développement"
-  ];
 
   const socialLinks = [
     {
@@ -153,7 +137,7 @@ const CamAlert = () => {
           <div className="mb-8">
             <h3 className="text-xl font-semibold text-gray-900 mb-4 flex items-center gap-2">
               <Search className="h-5 w-5 text-blue-500" />
-              🔍 VÉRIFIEZ TOUJOURS LA SOURCE D'UN MESSAGE
+              🔍 VÉRIFIEZ TOUJOURS LA SOURCE D&apos;UN MESSAGE
             </h3>
             <ul className="space-y-2 text-gray-700 ml-6 list-disc">
               <li>Un vrai militant défend ses idées avec des arguments.</li>
@@ -192,7 +176,7 @@ const CamAlert = () => {
         <section className="bg-white rounded-xl shadow-md p-6 lg:p-8">
           <h2 className="text-2xl font-bold text-gray-900 mb-6 flex items-center gap-3">
             <Users className="h-6 w-6 text-green-500" />
-            ✊ L'ENNEMI, CE N'EST PAS VOTRE FRÈRE CAMEROUNAIS !
+            ✊ L&apos;ENNEMI, CE N&apos;EST PAS VOTRE FRÈRE CAMEROUNAIS !
           </h2>
           <div className="prose prose-lg max-w-none text-gray-700">
             <p>Le vrai combat, c&apos;est l&apos;avenir du Cameroun, pas des querelles ethniques montées de toutes pièces.</p>
@@ -230,18 +214,14 @@ const CamAlert = () => {
             </div>
 
             {/* Message de sensibilisation */}
-            <motion.div 
-              whileHover={{ scale: 1.02 }}
-              className="inline-flex items-center gap-2 bg-green-500 text-white px-6 py-3 rounded-full font-bold shadow-lg hover:bg-green-600 transition-colors"
-            >
-              <Share2 className="h-5 w-5" />
+            <p className="mt-6 text-green-600 font-semibold text-lg bg-green-50 py-3 px-4 rounded-lg inline-block">
               Sensibilisons nos proches pour un Cameroun uni ! 🇨🇲
-            </motion.div>
+            </p>
           </div>
 
           {/* Copyright */}
           <div className="mt-8 pt-4 border-t border-gray-200 text-center text-sm text-gray-500">
-            © 2024 CamAlert - Tous droits réservés
+            © 2025 Sensibilisation Nationale
           </div>
         </section>
       </main>

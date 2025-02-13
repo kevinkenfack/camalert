@@ -53,7 +53,7 @@ const CamAlert = () => {
   ];
 
   // Ajout des fonctions de partage
-  const shareMessage = "🚨 ALERTE MANIPULATION 🇨🇲\nProtégeons l'unité du Cameroun ! Découvrez comment détecter et éviter les manipulations sur les réseaux sociaux.";
+  const shareMessage = "🚨 ALERTE MANIPULATION 🇨🇲\nProtégeons l&apos;unité du Cameroun ! Découvrez comment détecter et éviter les manipulations sur les réseaux sociaux.";
   const shareUrl = typeof window !== 'undefined' ? window.location.href : '';
 
   const consequences = [
@@ -103,7 +103,7 @@ const CamAlert = () => {
           </h1>
           <div className="prose prose-lg text-white/90">
             <p className="text-xl mb-4">
-              Le Cameroun approche d'une échéance électorale cruciale, et comme toujours, 
+              Le Cameroun approche d&apos;une échéance électorale cruciale, et comme toujours, 
               certaines forces cherchent à diviser pour mieux régner.
             </p>
             <p>
@@ -124,7 +124,7 @@ const CamAlert = () => {
           </h2>
           <p className="text-gray-700 mb-6">
             Une grande partie des messages incitant à la haine ne viennent pas de vrais citoyens, 
-            mais de faux comptes créés pour manipuler l'opinion :
+            mais de faux comptes créés pour manipuler l&apos;opinion :
           </p>
           <div className="grid gap-4 md:grid-cols-2 lg:grid-cols-3">
             {manipulationExamples.map((example, index) => (
@@ -195,8 +195,8 @@ const CamAlert = () => {
             ✊ L'ENNEMI, CE N'EST PAS VOTRE FRÈRE CAMEROUNAIS !
           </h2>
           <div className="prose prose-lg max-w-none text-gray-700">
-            <p>Le vrai combat, c'est l'avenir du Cameroun, pas des querelles ethniques montées de toutes pièces.</p>
-            <p>La haine ne profite qu'à ceux qui veulent nous affaiblir et détourner notre attention.</p>
+            <p>Le vrai combat, c&apos;est l&apos;avenir du Cameroun, pas des querelles ethniques montées de toutes pièces.</p>
+            <p>La haine ne profite qu&apos;à ceux qui veulent nous affaiblir et détourner notre attention.</p>
           </div>
 
           {/* Message d'unité supplémentaire */}

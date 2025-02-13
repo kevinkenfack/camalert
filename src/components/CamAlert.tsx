@@ -124,7 +124,7 @@ const SensibilisationCameroun = () => {
                 🚨 CAMEROUNAIS, NE TOMBEZ PAS DANS LE PIÈGE DE LA MANIPULATION 🚨
               </h1>
               <p className="text-lg text-gray-700 text-center">
-                Un message crucial pour l'unité et l'avenir de notre nation
+                Un message crucial pour l&apos;unité et l&apos;avenir de notre nation
               </p>
             </div>
           </div>
@@ -135,7 +135,7 @@ const SensibilisationCameroun = () => {
           <Card className="border-l-4 border-l-green-600">
             <CardContent className="pt-6">
               <p className="text-lg leading-relaxed">
-                Le <span className="font-bold">Cameroun</span> approche d'une échéance 
+                Le <span className="font-bold">Cameroun</span> approche d&apos;une échéance 
                 <span className="font-bold"> électorale</span> cruciale, et comme toujours, 
                 certaines forces cherchent à diviser pour <span className="font-bold">mieux régner.</span>
               </p>
@@ -227,11 +227,11 @@ const SensibilisationCameroun = () => {
             <CardContent className="pt-6">
               <h2 className="text-xl font-bold flex items-center gap-2 mb-4">
                 <Users className="text-green-600" />
-                ✊ L'ENNEMI, CE N'EST PAS VOTRE FRÈRE CAMEROUNAIS !
+                ✊ L&apos;ENNEMI, CE N&apos;EST PAS VOTRE FRÈRE CAMEROUNAIS !
               </h2>
               <div className="space-y-4">
-                <p>Le vrai combat, c'est l'avenir du Cameroun, pas des querelles ethniques montées de toutes pièces.</p>
-                <p>La haine ne profite qu'à ceux qui veulent nous affaiblir et détourner notre attention.</p>
+                <p>Le vrai combat, c&apos;est l&apos;avenir du Cameroun, pas des querelles ethniques montées de toutes pièces.</p>
+                <p>La haine ne profite qu&apos;à ceux qui veulent nous affaiblir et détourner notre attention.</p>
               </div>
             </CardContent>
           </Card>

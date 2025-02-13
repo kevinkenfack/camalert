@@ -57,7 +57,7 @@ const WelcomePopup = ({ isOpen, onClose }: WelcomePopupProps) => {
                     </li>
                     <li className="flex items-center gap-2">
                       <span className="text-green-500">✓</span>
-                      Protéger l'unité de notre nation
+                      Protéger l&apos;unité de notre nation
                     </li>
                     <li className="flex items-center gap-2">
                       <span className="text-green-500">✓</span>

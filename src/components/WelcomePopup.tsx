@@ -45,7 +45,7 @@ const WelcomePopup = ({ isOpen, onClose }: WelcomePopupProps) => {
                     🇨🇲 Bienvenue sur notre Plateforme de Sensibilisation 🇨🇲
                   </h2>
                   <p className="text-lg mb-4 text-center">
-                    Si vous êtes ici, c'est parce que vous vous souciez de l'avenir du Cameroun.
+                    Si vous êtes ici, c&apos;est parce que vous vous souciez de l&apos;avenir du Cameroun.
                   </p>
                   <p className="text-gray-600 mb-6">
                     Notre mission est de vous aider à :

@@ -29,10 +29,10 @@ const SensibilisationCameroun = () => {
 
   const manipulationExamples = [
     "Certains se prétendent pro-gouvernement et diffusent des messages anti-opposition.",
-    "D'autres se font passer pour des militants de l'opposition en tenant des propos extrémistes pour les discréditer.",
-    "Certains individus du régime créent même des faux profils d'opposants, pour semer la haine et décrédibiliser toute contestation.",
-    "D'autres fabriquent de faux comptes pro-gouvernement pour alimenter encore plus les tensions et attiser la haine.",
-    "Le but est clair : détourner l'attention des vrais problèmes du pays et empêcher tout débat constructif.",
+    "D&apos;autres se font passer pour des militants de l&apos;opposition en tenant des propos extrémistes pour les discréditer.",
+    "Certains individus du régime créent même des faux profils d&apos;opposants, pour semer la haine et décrédibiliser toute contestation.",
+    "D&apos;autres fabriquent de faux comptes pro-gouvernement pour alimenter encore plus les tensions et attiser la haine.",
+    "Le but est clair : détourner l&apos;attention des vrais problèmes du pays et empêcher tout débat constructif.",
     "Création de faux comptes de journalistes pour diffuser de fausses informations",
     "Utilisation de bots pour amplifier artificiellement certains messages diviseurs",
     "Diffusion de montages photos et vidéos manipulés pour créer des scandales"
@@ -40,7 +40,7 @@ const SensibilisationCameroun = () => {
 
   const preventionTips = [
     {
-      title: "Vérifiez l'authenticité des profils",
+      title: "Vérifiez l&apos;authenticité des profils",
       content: "Regardez la date de création du compte, le nombre de followers, et la cohérence des publications."
     },
     {

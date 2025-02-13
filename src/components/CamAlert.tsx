@@ -161,7 +161,7 @@ const SensibilisationCameroun = () => {
             <CardContent>
               <p className="mb-4 text-lg">
                 Une grande partie des messages incitant à la haine ne viennent pas de vrais citoyens, 
-                mais de faux comptes créés pour manipuler l'opinion :
+                mais de faux comptes créés pour manipuler l&apos;opinion :
               </p>
               <div className="space-y-4">
                 {manipulationExamples.map((text, index) => (
@@ -192,7 +192,7 @@ const SensibilisationCameroun = () => {
               <Alert variant="default" className="border-l-4 border-l-yellow-500">
                 <AlertTitle className="font-bold flex items-center gap-2">
                   <Search className="text-yellow-500" />
-                  🔍 VÉRIFIEZ TOUJOURS LA SOURCE D'UN MESSAGE AVANT DE LE PARTAGER
+                  🔍 VÉRIFIEZ TOUJOURS LA SOURCE D&apos;UN MESSAGE AVANT DE LE PARTAGER
                 </AlertTitle>
                 <div className="mt-2 space-y-2">
                   <p>• Un vrai <span className="font-bold">militant</span> défend ses idées avec des arguments.</p>

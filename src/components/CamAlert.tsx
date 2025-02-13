@@ -302,7 +302,7 @@ const CamAlert = () => {
                 </motion.div>
               ))}
             </div>
-            <p className="mt-8 text-red-600 font-semibold flex items-center gap-2">
+            <p className="mt-8 text-red-600 font-semibold flex items-center gap-2" id='protection'>
               <AlertTriangle className="h-5 w-5" />
               Ces gens ne cherchent pas à défendre une cause, mais à semer la confusion et la division.
             </p>
@@ -313,9 +313,9 @@ const CamAlert = () => {
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
-            className="bg-white rounded-3xl shadow-xl p-6 sm:p-8 lg:p-12"
+            className="bg-white rounded-3xl shadow-xl p-6 sm:p-8 lg:p-12"           
           >
-            <h2 className="text-2xl sm:text-3xl lg:text-4xl font-bold text-gray-900 mb-8 flex items-center gap-3" id='protection'>
+            <h2 className="text-2xl sm:text-3xl lg:text-4xl font-bold text-gray-900 mb-8 flex items-center gap-3">
               <Shield className="h-8 w-8 text-yellow-500" />
               <span className="bg-gradient-to-r from-yellow-600 to-yellow-500 bg-clip-text text-transparent">
                COMMENT NE PAS SE FAIRE MANIPULER ?

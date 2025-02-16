@@ -11,13 +11,13 @@ export const metadata: Metadata = {
   openGraph: {
     type: "website",
     locale: "fr_FR",
-    url: "https://camalert.vercel.app",
+    url: "https://camalert.vercel.app/",
     siteName: "CamAlert",
     title: "Ne tombez pas dans le piège de la manipulation",
     description: "Les réseaux sociaux sont utilisés pour diviser le Cameroun. Apprenez à identifier et contrer les tentatives de manipulation.",
     images: [
       {
-        url: "/site-v.jpg",
+        url: "/seo.jpg",
         width: 1200,
         height: 630,
         alt: "CamAlert - Sensibilisation contre la manipulation",
@@ -28,7 +28,7 @@ export const metadata: Metadata = {
     card: "summary_large_image",
     title: "Sensibilisation contre la manipulation",
     description: "Protégeons l'unité du Cameroun contre les manipulations sur les réseaux sociaux",
-    images: ["/site-v.jpg"],
+    images: ["/seo.jpg"],
     creator: "@CamAlert",
   },
   viewport: {

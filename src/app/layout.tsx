@@ -8,9 +8,6 @@ export const metadata: Metadata = {
   title: "Sensibilisation Cameroun - Alerte Manipulation",
   description: "Découvrez comment détecter et éviter les manipulations sur les réseaux sociaux au Cameroun. Ensemble, protégeons l'unité de notre pays contre les tentatives de division.",
   keywords: "Cameroun, manipulation, réseaux sociaux, unité, sensibilisation, fake news, division",
-  authors: [{ name: "CamAlert" }],
-  creator: "CamAlert",
-  publisher: "CamAlert",
   openGraph: {
     type: "website",
     locale: "fr_FR",
@@ -29,7 +26,7 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: "summary_large_image",
-    title: "CamAlert - Sensibilisation contre la manipulation",
+    title: "Sensibilisation contre la manipulation",
     description: "Protégeons l'unité du Cameroun contre les manipulations sur les réseaux sociaux",
     images: ["/site-v.jpg"],
     creator: "@CamAlert",

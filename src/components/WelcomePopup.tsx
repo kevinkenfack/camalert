@@ -88,7 +88,7 @@ const WelcomePopup = ({ isOpen, onClose }: { isOpen: boolean; onClose: () => voi
                       <Heart className="w-4 h-4 sm:w-5 sm:h-5 text-green-500 flex-shrink-0 mt-0.5" />
                       <div>
                         <h3 className="font-semibold text-green-800 text-sm sm:text-base">Notre Force</h3>
-                        <p className="text-green-700 text-xs sm:text-sm">L&apos;unité et la cohésion de tous les Camerounais peu imorte on origine</p>
+                        <p className="text-green-700 text-xs sm:text-sm">L&apos;unité et la cohésion de tous les Camerounais peu importe son origine</p>
                       </div>
                     </div>
                   </div>
